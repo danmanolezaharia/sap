@@ -5,10 +5,10 @@ import datetime
 pyautogui.FAILSAFE = True
 pyautogui.PAUSE = 0.5
 
-nameLogin = ''
-passLogin = ''
+nameLogin = 'gnhbsautomation'
+passLogin = '2%kRvPoep'
 serverName ='01.01'
-appPath = 'C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe'
+appPath = r'C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe'
 waitSecondsToOpen = 5
 tCode ='ZFI_DISP_FISCAL_CAL'
 fiscalYear = '2018'
@@ -23,6 +23,7 @@ def loginSAP(nameLogin,passLogin):
 
 def selectSapServer(serverName):
     for i in range(0,10):
+        print (i)
         pyautogui.press('tab')
     pyautogui.typewrite(serverName)  
     pyautogui.press('enter')
@@ -73,5 +74,3 @@ time.sleep(3)
 tCodeSap(tCode,fiscalYear,waitSecondsToRun)
 exportExcel()
 exitSAP()
-print("Completed!" + str(i))
-time.sleep(10)
