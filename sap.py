@@ -5,8 +5,8 @@ import datetime
 pyautogui.FAILSAFE = True
 pyautogui.PAUSE = 0.5
 
-nameLogin = 'gnhbsautomation'
-passLogin = '2%kRvPoep'
+nameLogin = 'H215997'
+passLogin = 'Parola1234r321'
 serverName ='01.01'
 appPath = r'C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe'
 waitSecondsToOpen = 5
@@ -65,12 +65,12 @@ def exitSAP():
     time.sleep(2)
     pyautogui.hotkey('alt', 'f4')
 
-
-openApp(appPath,waitSecondsToOpen)
-selectSapServer(serverName)
-time.sleep(3)
-loginSAP(nameLogin,passLogin)
-time.sleep(3)
-tCodeSap(tCode,fiscalYear,waitSecondsToRun)
-exportExcel()
-exitSAP()
+if __name__ == '__main__':
+    openApp(appPath,waitSecondsToOpen)
+    selectSapServer(serverName)
+    time.sleep(3)
+    loginSAP(nameLogin,passLogin)
+    time.sleep(3)
+    tCodeSap(tCode,fiscalYear,waitSecondsToRun)
+    exportExcel()
+    exitSAP()
